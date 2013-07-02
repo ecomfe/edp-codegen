@@ -1,0 +1,13 @@
+{
+    "name": "edp-codegen",
+    "description": "Package for edp code generation",
+    "version": "0.4.0",
+    "contributors": [
+        { "name": "errorrik", "email": "errorrik@gmail.com" }
+    ],
+    "devDependencies": {
+        "handlebars": "~1.0"
+    },
+    "main": "index.js",
+    "repository": "git://github.com/ecomfe/edp-codegen"
+}
