@@ -1,9 +1,10 @@
 {
     "name": "edp-codegen",
     "description": "Package for edp code generation",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "contributors": [
-        { "name": "errorrik", "email": "errorrik@gmail.com" }
+        { "name": "errorrik", "email": "errorrik@gmail.com" },
+        { "name": "leeight", "email": "leeight@gmail.com" }
     ],
     "dependencies": {
         "handlebars": "~1.0"

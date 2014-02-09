@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    {{#author}}<meta name="author" content="{{author}}" />{{/author}}
     <title>{{title}}</title>
     {{#loader}}<script src="{{{loaderUrl}}}"></script>{{/loader}} 
     {{#loaderConfig}}
