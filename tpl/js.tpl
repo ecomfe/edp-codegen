@@ -1,24 +1,26 @@
 /**
- * @file {{{file}}}
- * @author {{{author}}}({{{email}}})
+ * @file ${file}
+ * @author ${author}(${email})
  */
 
 define( function ( require, exports, module ) {
     // 引入一个依赖的模块，可以使用require( relative/top-level id ) 
     // var dependModule = require( './dependModule' );
 
-    {{#functionModule}}/**
-     * {{{moduleDescription}}}
+<!-- if: ${functionModule} -->
+    /**
+     * ${moduleDescription}
      */
-    function {{{moduleId}}}() {
+    function ${moduleId}() {
         // do something here
-    }{{/functionModule}}
-    {{^functionModule}}/**
-     * {{{moduleDescription}}}
+    }
+<!-- else -->
+    /**
+     * ${moduleDescription}
      */
-    var {{{moduleId}}} = {};
-    {{/functionModule}}
+    var ${moduleId} = {};
+<!-- /if -->
 
     // return模块
-    return {{{moduleId}}};
+    return ${moduleId};
 } );

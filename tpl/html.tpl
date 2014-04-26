@@ -2,29 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    {{#author}}<meta name="author" content="{{.}}" />{{/author}}
-    <title>{{title}}</title>
-    {{#loader}}<script src="{{{loaderUrl}}}"></script>{{/loader}} 
-    {{#loaderConfig}}
-    <script>
+    <!-- if: ${author} --><meta name="author" content="${author}" /><!-- /if -->
+    <title>${title}</title>
+    <!-- if: ${loader} --><script src="${loaderUrl}"></script><!-- /if -->
+    <!-- if: ${loaderConfig} --><script>
     require.config({
-        baseUrl: '{{{loaderBaseUrl}}}',
-        paths: { {{#forEach loaderPaths}}
-            {{{key}}}: '{{{value}}}'{{^last}},{{/last}}
-        {{/forEach}} },
-        packages: [ {{#loaderPackages}}
+        baseUrl: '${loaderBaseUrl}',
+        paths: {<!-- for: ${loaderPaths} as ${path} -->
+            ${path.key}: '${path.value}'<!-- if: !${path.last} -->,<!-- /if --><!-- /for -->
+        },
+        packages: [<!-- for: ${loaderPackages} as ${pkg} -->
             {
-                name: '{{{name}}}',
-                location: '{{{location}}}',
-                main: '{{{main}}}'
-            }{{^last}},{{/last}}
-        {{/loaderPackages}}]
+                name: '${pkg.name}',
+                location: '${pkg.location}'<!-- if: ${pkg.main} -->,
+                main: '${pkg.main}'<!-- /if -->
+            }<!-- if: !${pkg.last} -->,<!-- /if --><!-- /for -->
+        ]
     });
-    </script>
-    {{/loaderConfig}}
+    </script><!-- /if -->
 </head>
 
 <body>
-{{{body}}}
+${body}
 </body>
 </html>
