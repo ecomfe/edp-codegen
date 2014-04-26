@@ -7,15 +7,15 @@
     <!-- if: ${loader} --><script src="${loaderUrl}"></script><!-- /if -->
     <!-- if: ${loaderConfig} --><script>
     require.config({
-        baseUrl: '${loaderBaseUrl}',
-        paths: {<!-- for: ${loaderPaths} as ${path} -->
-            ${path.key}: '${path.value}'<!-- if: !${path.last} -->,<!-- /if --><!-- /for -->
+        'baseUrl': '${loaderBaseUrl}',
+        'paths': {<!-- for: ${loaderPaths} as ${path} -->
+            '${path.key}': '${path.value}'<!-- if: !${path.last} -->,<!-- /if --><!-- /for -->
         },
-        packages: [<!-- for: ${loaderPackages} as ${pkg} -->
+        'packages': [<!-- for: ${loaderPackages} as ${pkg} -->
             {
-                name: '${pkg.name}',
-                location: '${pkg.location}'<!-- if: ${pkg.main} -->,
-                main: '${pkg.main}'<!-- /if -->
+                'name': '${pkg.name}',
+                'location': '${pkg.location}'<!-- if: ${pkg.main} -->,
+                'main': '${pkg.main}'<!-- /if -->
             }<!-- if: !${pkg.last} -->,<!-- /if --><!-- /for -->
         ]
     });
