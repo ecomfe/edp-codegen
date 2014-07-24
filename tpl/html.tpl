@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <!-- if: ${author} --><meta name="author" content="${author}" /><!-- /if -->
+    <meta charset="utf-8">
     <title>${title}</title>
     <!-- if: ${loader} --><script src="${loaderUrl}"></script><!-- /if -->
     <!-- if: ${loaderConfig} --><script>
